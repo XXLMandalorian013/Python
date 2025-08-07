@@ -16,7 +16,7 @@ else:
 import subprocess
 import platform
 
-ip = "10.23.1.1"
+ip = "X.X.X.X"
 
 # Determine ping parameters based on OS
 param = "-n" if platform.system().lower() == "windows" else "-c"
