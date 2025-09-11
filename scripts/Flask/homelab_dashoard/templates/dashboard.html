@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Lab Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Home Lab Dashboard</h1>
+    <div class="app-grid">
+        {% for web_page in urls %}
+        <div class="app-card">
+            <a href="{{ web_page.url }}" target="_blank">
+                <img src="{{ url_for('static', filename='images/' + web_page.icon) }}" alt="{{ web_page.name }}">
+                <span>{{ web_page.name }}</span>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
